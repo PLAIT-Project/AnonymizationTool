@@ -19,15 +19,6 @@
 #' @import "shinyFeedback"
 
 
-
-library(shiny)
-library(shinyjs)
-library(shinyFiles)
-library(shinyFeedback)
-
-
-
-
 ui <- fluidPage(
   # disable actionButton after click on it
   tags$head(tags$script(HTML('
