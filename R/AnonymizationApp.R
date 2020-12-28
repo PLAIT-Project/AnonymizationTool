@@ -1,16 +1,22 @@
+#' @name AnonymizationApp
+#'
 #' @title AnonymizationApp
-#'
+
 #' @description Takes an .fcs or .lmd file as an input, anonymizes all the personal data in that file and save it as a new .fcs or .lmd file within a Shiny App
-#'
+
 #' @param Btn_GetFile Input of the filepath of the file that is about to be made anonymous
-#' @param checkbox Check, if you allow the file to be changed
 #' @param newFileName the name of the new file which is a copy of the origin file
 #' @param goButton Submit Button to submit the new filename
 #' @param Anonymized action Button to anonymize the new file
-#'
+
 #' @return An anonymized file which is a copy of the origin file but without the personal information and another filename
+
 #' @export
-#' @importFrom dplyr "%>%"
+
+#' @import "shiny"
+#' @import "shinyjs"
+#' @import "shinyFiles"
+#' @import "shinyFeedback"
 
 
 
@@ -94,8 +100,7 @@ ui <- fluidPage(
 
 disableActionButton <- function(id,session) {
   session$sendCustomMessage(type="jsCode",
-                            list(code= paste("$('#",id,"').prop('disabled',true)"
-                                             ,sep="")))
+                            list(code= paste("$('#",id,"').prop('disabled',true)", sep="")))
 }
 
 
