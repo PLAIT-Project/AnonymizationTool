@@ -6,7 +6,7 @@
 
 #' @return An anonymized file which is a copy of the origin file but without the personal information and another filename
 
-#' @export
+#' @export shinyApp
 
 #' @import "shiny"
 #' @import "shinyjs"
