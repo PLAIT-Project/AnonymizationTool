@@ -1,3 +1,8 @@
+library(shiny)
+library(shinyjs)
+library(shinyFiles)
+library(shinyFeedback)
+
 server <- function(input, output, session) {
 
   observe({
