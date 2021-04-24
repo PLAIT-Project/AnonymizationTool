@@ -24,7 +24,7 @@ library(Rcpp)
 
 #sourceCpp('hexeditor.cpp')
 
-AnonymizationTool = function(){
+
 
 
 ### Concept of the Shiny-App ###
@@ -49,7 +49,7 @@ AnonymizationTool = function(){
 # newFilename         textOutput:       The name of the new file.
 # success             textOutput:       Success info that the anonymization is done.
 
-outputApp = runApp(list(
+
 
 ui = fluidPage(
   # disable actionButton after click on it
@@ -123,13 +123,13 @@ ui = fluidPage(
 
                      ))),
 
-),
+)
 
 # function to disable the action button in order to change the file input
 disableActionButton <- function(id,session) {
   session$sendCustomMessage(type="jsCode",
                             list(code= paste("$('#",id,"').prop('disabled',true)", sep="")))
-},
+}
 
 
 server = function(input, output, session) {
@@ -217,11 +217,11 @@ server = function(input, output, session) {
 
 }
 
-))
+# Create Shiny app
 
-return(outputApp)
+shinyApp(ui, server)
 
-}
+
 
 
 
