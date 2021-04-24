@@ -22,7 +22,7 @@ library(shinyFiles)
 library(shinyFeedback)
 library(Rcpp)
 
-#sourceCpp('hexeditor.cpp')
+sourceCpp('hexeditor.cpp')
 
 
 
