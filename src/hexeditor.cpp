@@ -918,7 +918,7 @@ CharacterVector hexeditor(const char * filename) {
 
       // next separator for .fcs: '\f'
 
-      // \fSAMPLEID1\
+      // '\fSAMPLEID1\'
 
 
       else if (temp == '\\'){
@@ -988,7 +988,7 @@ CharacterVector hexeditor(const char * filename) {
                                   fseek(fp, i, SEEK_SET);
                                 }}}}}}}}}}}}
 
-          // .FILENAME
+          // '\fFILENAME\' 
 
           else if (temp1 == 'F'){
             i = i+1;
@@ -1046,7 +1046,7 @@ CharacterVector hexeditor(const char * filename) {
                             }}}}}}}}}}
 
 
-          // .ORIGINALGUID
+          // '\fORIGINALGUID\' 
 
           else if (temp1 == 'O'){
             i = i+1;
@@ -1116,7 +1116,7 @@ CharacterVector hexeditor(const char * filename) {
                                     }}}}}}}}}}}}}}
 
 
-          // .GUID
+          // '\fGUID\'
 
           else if (temp1 == 'G'){
             i = i+1;
@@ -1162,7 +1162,7 @@ CharacterVector hexeditor(const char * filename) {
                     }}}}}}
 
 
-          // .$FIL
+          // '\f$FIL\'
 
           else if (temp1 == '$'){
             i = i+1;
@@ -1209,12 +1209,13 @@ CharacterVector hexeditor(const char * filename) {
         }}
     }
 
-    fseek(fp, 0, SEEK_SET);
-    while ( ! feof (fp) )
-    {
-      if ( fgets (buffer , 3500 , fp) == NULL ) break;
-      fputs (buffer , stdout);
-    }
+// for printing out anonymized Data as string for testing
+//     fseek(fp, 0, SEEK_SET);
+//     while ( ! feof (fp) )
+//     {
+//       if ( fgets (buffer , 3500 , fp) == NULL ) break;
+//       fputs (buffer , stdout);
+//     }
   }
   return 0;
   fclose(fp);
