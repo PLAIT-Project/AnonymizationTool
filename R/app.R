@@ -25,7 +25,7 @@ library(Rcpp)
 sourceCpp('hexeditor.cpp')
 source('ReadFCS.R')
 source('WriteFCS.R')
-source('CompensationToSpillover')
+source('CompensationToSpillover.R')
 
 
 
