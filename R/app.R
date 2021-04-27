@@ -211,7 +211,7 @@ server = function(input, output, session) {
             WriteFCS(input$newFileName, Data = A$PlainData,
                      SpilloverMatrix = CompensationToSpillover(A$CompensationMatrix)$SpilloverMatrix,
                      VarIdentifiers = A$VarIdentifiers, DeviceName = A$DeviceName,
-                     VarNames = A$VarNames, Cls = A$Cls, OutDirectory="D:/AnonymizationTool/tests_anni/data")
+                     VarNames = A$VarNames, Cls = A$Cls, OutDirectory=getPath())
           }
           paste0("The file was successfully anonymized. You can upload it on PLAIT. The file is: ", newFilename())
         }
