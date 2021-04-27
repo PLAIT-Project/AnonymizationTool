@@ -1,4 +1,4 @@
-CompensationToSpillover <- function(CompensationMatrix){
+CompensationToSpillover = function(CompensationMatrix){
   # V = CompensationToSpillover(CompensationMatrix)
   # 
   # INPUT
