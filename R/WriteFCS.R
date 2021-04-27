@@ -1,4 +1,4 @@
-WriteFCS <- function(FileName, Data, DeviceName="", SpilloverMatrix=NULL,
+WriteFCS = function(FileName, Data, DeviceName="", SpilloverMatrix=NULL,
                      VarIdentifiers=NULL, VarNames=NULL, Cls=NULL,
                      OutDirectory=NULL){
   # V = WriteFCS(FileName, Data, VarIdentifiers,
