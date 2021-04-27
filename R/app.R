@@ -203,9 +203,16 @@ server = function(input, output, session) {
 
       output$success <- renderText({
         if (input$Anonymized == 1){
-          hexeditor(newFilename())
-          # .C("hexeditor", newFilename())
-
+          if (newFilenameEnding() == ".LMD" || newFilenameEnding() == ".lmd"){
+            hexeditor(newFilename())
+          }
+          else{
+            A <- ReadFCS(getDatapath(), Anonymize = T, tryToCompensate = F)
+            WriteFCS(input$newFileName, Data = A$PlainData,
+                     SpilloverMatrix = CompensationToSpillover(A$CompensationMatrix)$SpilloverMatrix,
+                     VarIdentifiers = A$VarIdentifiers, DeviceName = A$DeviceName,
+                     VarNames = A$VarNames, Cls = A$Cls, OutDirectory="D:/AnonymizationTool/tests_anni/data")
+          }
           paste0("The file was successfully anonymized. You can upload it on PLAIT. The file is: ", newFilename())
         }
       })
