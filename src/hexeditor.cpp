@@ -9,9 +9,6 @@
 
 using namespace Rcpp;
 
-using std::cout; using std::cerr;
-using std::endl; using std::string;
-using std::ifstream; using std::vector;
 // [[Rcpp::export]]
 
 CharacterVector hexeditor(const char * filename) {
