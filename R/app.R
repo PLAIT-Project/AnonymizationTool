@@ -22,7 +22,7 @@ library(shinyFiles)
 library(shinyFeedback)
 library(Rcpp)
 
-sourceCpp('hexeditor.cpp')
+Rcpp::sourceCpp('hexeditor.cpp')
 source('ReadFCS.R')
 source('WriteFCS.R')
 source('CompensationToSpillover.R')
@@ -84,7 +84,7 @@ ui = fluidPage(
       tags$hr(),
 
       # input of the filepath of the input file
-      shinyFilesButton("Btn_GetFile", "Choose a file" ,
+      shinyFiles::shinyFilesButton("Btn_GetFile", "Choose a file" ,
                        title = "Please select a file:", multiple = FALSE,
                        buttonType = "default", class = NULL),
       br(),
@@ -142,7 +142,7 @@ server = function(input, output, session) {
 
   volumes = getVolumes()
   observe({
-    shinyFileChoose(input, "Btn_GetFile", roots = volumes, session = session)
+    shinyFiles::shinyFileChoose(input, "Btn_GetFile", roots = volumes, session = session)
 
     if(!is.null(input$Btn_GetFile)){
       # save the selected file and the filepath
