@@ -44,7 +44,7 @@ CharacterVector hexeditor(const char * filename) {
 // one of the above keywords. As ORIGINALGUID is the longest with a length of 12
 // plus the separators at the beginning and ending, 14 character
 // variables are necessary.
-  char temp, temp0, temp1, temp2, temp3, temp4, temp5, temp6, temp7, temp8, temp9, temp10, temp11, temp12, temp13, temp14;
+  char temp, temp1, temp2, temp3, temp4, temp5, temp6, temp7, temp8, temp9, temp10, temp11, temp12, temp13, temp14;
 // the end_of_keyword variables search for the last separator of the content
 // of the corresponding keyword
   char end_of_name, end_of_filename, end_of_originalguid, end_of_guid, end_of_fil;
@@ -62,8 +62,7 @@ CharacterVector hexeditor(const char * filename) {
   char anon_fil[100] = "";
 // the string of which the above strings of 'XXXX' are generated
   char x[] = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  char buffer [3500];
-
+  
    
     // FUNCTION //
     
@@ -917,6 +916,7 @@ CharacterVector hexeditor(const char * filename) {
       }
     }
 
+//     char buffer [3500];
 //     fseek(fp, 0, SEEK_SET);
 //     while ( ! feof (fp) )
 //     {
