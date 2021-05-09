@@ -4,8 +4,10 @@ The anonymization app deletes personal data from .fcs/.lmd files. In the process
 ## Installation
 Install the package by using Github:
 > remotes::install_github("JonasSchulz-Marner/AnonymizationTool")
+
 Or just run the AnonymizationTool in R with following Command:
 > shiny::runGitHub("AnonymizationTool", "JonasSchulz-Marner", subdir = "R")
 
 ## Manual
-The full manual for physicians, doctors and scientists who have .fcs/.lmds for anonymization, is available here: update link 
+The full manual for physicians, doctors and scientists who have .fcs/.lmds for anonymization, is available here: http://137.248.121.81:9798/plait/anonymisierungsapp/ (link is only accessible from the university network of the University of Marburg.)
+(update link / manual? )
