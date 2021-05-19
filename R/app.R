@@ -140,12 +140,13 @@ server = function(input, output, session) {
   observe({
     shinyFiles::shinyFileChoose(input, "Btn_GetFile", roots = volumes, session = session)
 
+    # all functions only exist, if a file is selected as input
     if(!is.null(input$Btn_GetFile)){
       # save the selected file and the filepath
       file_selected<-parseFilePaths(volumes, input$Btn_GetFile)
-
       filepath <- as.character(file_selected$datapath)
 
+      # OUTPUT: complete filepath
       getDatapath <- reactive({
         return(filepath)
       })
@@ -155,17 +156,18 @@ server = function(input, output, session) {
         return(dirname(filepath))
       })
 
-      # OUTPUT: file extension
+      # OUTPUT: file extension (e.g. ".lmd")
       getFileExtension <- reactive({
         substr(filepath, nchar(filepath)-4+1, nchar(filepath))
       })
 
       # generate the text right after selecting the file
-      # OUTPUT: text of the datapath
+      # OUTPUT: text message with the selected datapath
       text <- eventReactive(input$Btn_GetFile, {
         paste0("You have selected the following file: ", getDatapath())
       })
 
+      # render the text of the above function
       output$fileName <- renderText({
         text()
       })
@@ -187,6 +189,7 @@ server = function(input, output, session) {
       })
 
 
+      # render the text of the second panel with the new filename
       output$newFilename <- renderText({
         if (input$goButton == 1){
           shinyjs::hide("goButton")
@@ -199,6 +202,7 @@ server = function(input, output, session) {
 
 
 
+      # render the text after a successful anonymization in the third panel
       output$success <- renderText({
         if (input$Anonymized == 1){
           hexeditor(newFilename())
