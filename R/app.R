@@ -16,6 +16,15 @@
 #' @import "shinyFiles"
 #' @import "shinyFeedback"
 
+requiredPackages <- c("shiny", "shinyjs", "shinyFiles", "shinyFeedback", "Rcpp")
+
+new.packages <- requiredPackages[!(requiredPackages %in% installed.packages()[,"Package"])]
+
+if(length(new.packages)) install.packages(new.packages, quiet=TRUE)
+
+invisible(lapply(requiredPackages, library, character.only = TRUE))
+
+
 library(shiny)
 library(shinyjs)
 library(shinyFiles)
