@@ -3,10 +3,10 @@ The anonymization app deletes personal data from .fcs/.lmd files. In the process
 
 ## Installation
 Install the package by using Github:
-> remotes::install_github("JonasSchulz-Marner/AnonymizationTool")
+> remotes::install_github("PLAIT-project/AnonymizationTool")
 
 Or just run the AnonymizationTool in R with following Command:
-> shiny::runGitHub("AnonymizationTool", "JonasSchulz-Marner", subdir = "R")
+> shiny::runGitHub("AnonymizationTool", "PLAIT-project", subdir = "R")
 
 More detailed instructions can be found in the Manuel. 
 
