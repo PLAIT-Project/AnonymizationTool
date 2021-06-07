@@ -11,8 +11,8 @@ PLAIT-Website: [https://plait.uni-marburg.de](http://137.248.121.81:9798/plait/)
 PLAIT-Webservice: [https://plait-ai.uni-marburg.de](http://137.248.121.81:9797) ([eduroam VPN](https://www.uni-marburg.de/de/hrz/dienste/vpn) necessary)
 
 ## Quick-Installation
-(for detailed installation instructions go to [https://plait.uni-marburg.de/anonymisierungsapp](http://137.248.121.81:9798/plait/anonymisierungsapp/))
-Install the required packages for the execution (see [here](http://137.248.121.81:9798/plait/anonymisierungsapp/); link is only accessible from eduroam):
+Note: For detailed installation instructions go to [https://plait.uni-marburg.de/anonymisierungsapp](http://137.248.121.81:9798/plait/anonymisierungsapp/) <br>
+Install the required packages for the execution (see [here](http://137.248.121.81:9798/plait/anonymisierungsapp/); link is accessible from eduroam only - use [VPN](https://www.uni-marburg.de/de/hrz/dienste/vpn)):
 ```{r}
 requiredPackages <- c("shiny", "shinyjs", "shinyFiles", "shinyFeedback", "Rcpp") 
 new.packages <- requiredPackages[!(requiredPackages %in% installed.packages()[,"Package"])]
@@ -30,12 +30,12 @@ remotes::install_github("PLAIT-project/AnonymizationTool")
 shiny::runApp('R')
 ```
 
-More detailed instructions can be found in the Manual. 
+More detailed instructions can be found in the [Manual](http://137.248.121.81:9798/plait/handbuch/). 
 
 ## Manual
-The full manual for physicians, doctors and scientists who have .fcs/.lmds files for anonymization, is available (here)[http://137.248.121.81:9798/plait/anonymisierungsapp/]; link is only accessible from eduroam)
+The full manual for physicians, doctors and scientists who have .fcs/.lmds files for anonymization, is available (here)[http://137.248.121.81:9798/plait/handbuch/]; link is accessible from eduroam only - use [VPN](https://www.uni-marburg.de/de/hrz/dienste/vpn))
 
-After this, a new window should pop-up: <br>
+After download, installation and execution, a new window should pop-up: <br>
 
 ![New Window](https://raw.githubusercontent.com/Wandergarten/PLAIT-AnonApp/main/howto/1a.png)
 
