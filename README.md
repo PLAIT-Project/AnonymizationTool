@@ -7,6 +7,8 @@ The anonymization app deletes personal data from .fcs/.lmd files. In the anonymi
 Requirements: R > 3.6 and various shiny-related packages (see below) <br>
 Recommended: R 4.0.3 and R-Studio 1.33
 
+PLAIT-Website: (https://plait.uni-marburg.de)[137.248.121.81:9798/plait/]
+PLAIT-Webservice: (https://plait-ai.uni-marburg.de)[137.248.121.81:9797]
 
 ## Installation
 
@@ -30,7 +32,7 @@ remotes::install_github("PLAIT-project/AnonymizationTool")
 More detailed instructions can be found in the Manual. 
 
 ## Manual
-The full manual for physicians, doctors and scientists who have .fcs/.lmds files for anonymization, is available here: http://137.248.121.81:9798/plait/anonymisierungsapp/ (link is only accessible from the university network of the University of Marburg.)
+The full manual for physicians, doctors and scientists who have .fcs/.lmds files for anonymization, is available (here)[http://137.248.121.81:9798/plait/anonymisierungsapp/]; link is only accessible from eduroam)
 
 After this, a new window should pop-up: <br>
 
