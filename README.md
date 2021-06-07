@@ -33,7 +33,7 @@ shiny::runApp('R')
 More detailed instructions can be found in the [Manual](http://137.248.121.81:9798/plait/handbuch/). 
 
 ## Manual
-The full manual for physicians, doctors and scientists who have .fcs/.lmds files for anonymization, is available (here)[http://137.248.121.81:9798/plait/handbuch/]; link is accessible from eduroam only - use [VPN](https://www.uni-marburg.de/de/hrz/dienste/vpn))
+The full manual for physicians, doctors and scientists who have .fcs/.lmds files for anonymization, is available [here](http://137.248.121.81:9798/plait/handbuch/); link is accessible from eduroam only - use [VPN](https://www.uni-marburg.de/de/hrz/dienste/vpn))
 
 After download, installation and execution, a new window should pop-up: <br>
 
