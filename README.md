@@ -5,6 +5,8 @@ The anonymization app deletes personal data from .fcs/.lmd files. In the process
 Install the required packages:
 > requiredPackages <- c("shiny", "shinyjs", "shinyFiles", "shinyFeedback", "Rcpp") new.packages <- requiredPackages[!(requiredPackages %in% installed.packages()[,"Package"])]  
 > if(length(new.packages)) install.packages(new.packages, quiet=TRUE)
+
+
 > invisible(lapply(requiredPackages, library, character.only = TRUE)) 
 
 Install the package by using Github:
