@@ -9,7 +9,8 @@ Install the package by using Github:
 Or just run the AnonymizationTool in R with following Command:
 > shiny::runGitHub("AnonymizationTool", "PLAIT-project", subdir = "R")
 
-Install the required packages (see here: http://137.248.121.81:9798/plait/anonymisierungsapp/ (link is only accessible from the university network of the University of Marburg.)):
+Install the required packages:
+see here: http://137.248.121.81:9798/plait/anonymisierungsapp/ (link is only accessible from the university network of the University of Marburg.)
 > requiredPackages <- c("shiny", "shinyjs", "shinyFiles", "shinyFeedback", "Rcpp") new.packages <- requiredPackages[!(requiredPackages %in% installed.packages()[,"Package"])]  
 > if(length(new.packages)) install.packages(new.packages, quiet=TRUE)
 > 
