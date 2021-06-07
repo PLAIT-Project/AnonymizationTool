@@ -10,8 +10,8 @@ Recommended: R 4.0.3 and R-Studio 1.33
 PLAIT-Website: [https://plait.uni-marburg.de](http://137.248.121.81:9798/plait/) <br>
 PLAIT-Webservice: [https://plait-ai.uni-marburg.de](http://137.248.121.81:9797)
 
-## Installation
-
+## Quick-Installation
+(for detailed installation instructions go to [https://plait.uni-marburg.de/anonymisierungsapp](http://137.248.121.81:9798/plait/anonymisierungsapp/))
 Install the required packages for the execution (see [here](http://137.248.121.81:9798/plait/anonymisierungsapp/); link is only accessible from eduroam):
 ```{r}
 requiredPackages <- c("shiny", "shinyjs", "shinyFiles", "shinyFeedback", "Rcpp") 
@@ -27,6 +27,7 @@ shiny::runGitHub("AnonymizationTool", "PLAIT-project", subdir = "R")
 Or install the package by using Github:
 ```{r}
 remotes::install_github("PLAIT-project/AnonymizationTool")
+shiny::runApp('R')
 ```
 
 More detailed instructions can be found in the Manual. 
@@ -49,7 +50,6 @@ After you have selected your lymphoma dataset (.LMD/.FCS), confirm your wish to 
 Now, you are all set to let the Anonymization tool do its work: Click on the button "Anonymize"
 
 ![Anonymize](https://raw.githubusercontent.com/Wandergarten/PLAIT-AnonApp/main/howto/3.png)
-
 
 Note that this is a student project!
 
