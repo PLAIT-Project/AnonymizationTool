@@ -54,5 +54,5 @@ Now, you are all set to let the Anonymization tool do its work: Click on the but
 Note that this is a student project!
 
 For inquiries and feedback, contact: databionics@informatik.uni-marburg.de <br>
-Project lead: Prof. Ultsch, Dr. rer. nat. MC Thrun, Dr. med. Brendel <br>
-Authors and contributors: F. Lerch, J. Schulz-Marner, AC Rathert, C. Kujath 
+Project lead: [Prof. Ultsch](https://www.uni-marburg.de/fb12/arbeitsgruppen/datenbionik), [Dr. rer. nat. MC Thrun](https://mthrun.github.io/index), [Dr. med. Brendel](https://www.uni-marburg.de/de/fb20/bereiche/zim/haematoonkol/forschung/internetauftritt-der-ag-brendel) <br>
+Authors and contributors: [Dr. F. Lerch](https://www.uni-marburg.de/fb12/arbeitsgruppen/datenbionik/mitarbeiter), [J. Schulz-Marner](https://github.com/JonasSchulz-Marner), AC. Rathert, [C. Kujath](https://github.com/Wandergarten), S. Nguyen 
