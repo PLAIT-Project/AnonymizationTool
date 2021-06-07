@@ -10,10 +10,10 @@ Recommended: R 4.0.3 and R-Studio 1.33
 
 ## Installation
 
-Install the required packages for the execution (see here):\
-see here: http://137.248.121.81:9798/plait/anonymisierungsapp/ (link is only accessible from the university network of the University of Marburg.)
+Install the required packages for the execution (see [here](http://137.248.121.81:9798/plait/anonymisierungsapp/); link is only accessible from eduroam):
 ```{r}
-requiredPackages <- c("shiny", "shinyjs", "shinyFiles", "shinyFeedback", "Rcpp") new.packages <- requiredPackages[!(requiredPackages %in% installed.packages()[,"Package"])]
+requiredPackages <- c("shiny", "shinyjs", "shinyFiles", "shinyFeedback", "Rcpp") 
+new.packages <- requiredPackages[!(requiredPackages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages, quiet=TRUE)
 invisible(lapply(requiredPackages, library, character.only = TRUE)) 
 ```
