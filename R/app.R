@@ -23,7 +23,7 @@ library(shinyFiles)
 library(shinyFeedback)
 library(Rcpp)
 
-Rcpp::sourceCpp('hexeditor.cpp')
+Rcpp::sourceCpp('src/hexeditor.cpp')
 
 
 ### Concept of the Shiny-App ###
