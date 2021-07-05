@@ -4,8 +4,8 @@ PLAIT: Phenotyping Lymphoma with an Artificial Intelligence Toolbox <br>
 
 The anonymization app deletes personal data from .fcs/.lmd files. In the anonymization process, the entered file is overwritten in the affected areas, which means field contents are deleted. This enables the further use of the anonymized file for physicians and doctors on services such as ours. 
 
-Requirements: R > 3.5 and various shiny-related packages (see below) <br>
-Recommended: R 4.0.3 and R-Studio 1.33
+Requirements: R > 3.5, various shiny-related packages (see below) and RTools <br>
+Recommended: R 4.0.3, R-Studio 1.33 and RTools40
 
 PLAIT-Website: [https://plait.uni-marburg.de](http://137.248.121.81:9798/plait/) ([eduroam VPN](https://www.uni-marburg.de/de/hrz/dienste/vpn) necessary) <br>
 PLAIT-Webservice: [https://plait-ai.uni-marburg.de](http://137.248.121.81:9797) ([eduroam VPN](https://www.uni-marburg.de/de/hrz/dienste/vpn) necessary)
