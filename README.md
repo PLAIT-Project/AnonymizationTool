@@ -23,8 +23,8 @@ Run the AnonymizationTool in R with following Command:
 ```{r}
 shiny::runGitHub("AnonymizationTool", "PLAIT-project", subdir = "R")
 ```
-
-Or install the package by using Github:
+For permanent installation, we recommend downloading this repository as ZIP-folder (upper right, green button) and install it locally. 
+Or install the package by using Github (requires RTools installed and added to PATH):
 ```{r}
 remotes::install_github("PLAIT-project/AnonymizationTool")
 shiny::runApp('R')
