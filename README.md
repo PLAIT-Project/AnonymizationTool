@@ -24,12 +24,14 @@ Run the AnonymizationTool in R with following Command:
 shiny::runGitHub("AnonymizationTool", "PLAIT-project", subdir = "R")
 ```
 For permanent installation, download this repository as [ZIP-folder](https://github.com/PLAIT-Project/AnonymizationTool/archive/refs/heads/master.zip) (upper right, green button) and install it locally (make sure that the package is unpacked). 
-
+<!---
 ![Installation1 1](https://user-images.githubusercontent.com/56444740/126128654-85e5dec0-1408-4560-a180-f6d104f66731.png)
+-->
 
 Click on "AnonymizationTool" for opening the Project in R.
-
+<!---
 ![Installation2](https://user-images.githubusercontent.com/56444740/126128944-92aff85d-666d-4d0a-bee9-ef85ec1ea452.png)
+-->
 
 To start the app, enter the following command in the command line:
 ```{r}
@@ -43,19 +45,19 @@ The full manual for physicians, doctors and scientists who have .fcs/.lmds files
 
 After download, installation and execution, a new window should pop-up: <br>
 
-![New Window](https://raw.githubusercontent.com/Wandergarten/PLAIT-AnonApp/main/howto/1a.png)
+![New Window](https://raw.githubusercontent.com/PLAIT-Project/AnonymizationTool/main/howto/1a.png)
 
-Click on the Button "Choose File", this will prompt your file explorer. Choose the file you would like to anonymize by marking and selecting it. If you'd like to try it out, this package comes with three sample .LMD files in the folder [/Sample/](https://github.com/Wandergarten/PLAIT-AnonApp/tree/main/sample).
+Click on the Button "Choose File", this will prompt your file explorer. Choose the file you would like to anonymize by marking and selecting it. If you'd like to try it out, this package comes with three sample .LMD files in the folder [/Sample/](https://github.com/PLAIT-Project/AnonymizationTool/tree/main/sample).
 
-![Choose File](https://raw.githubusercontent.com/Wandergarten/PLAIT-AnonApp/main/howto/1b.png)
+![Choose File](https://raw.githubusercontent.com/PLAIT-Project/AnonymizationTool/main/howto/1b.png)
 
 After you have selected your lymphoma dataset (.LMD/.FCS), confirm your wish to irreversibly anonymize this file. It may be recommended, creating a backup of you file in another location of your computer's directory. To avoid this, give your file another name with the same file type extension.
 
-![New File Name](https://raw.githubusercontent.com/Wandergarten/PLAIT-AnonApp/main/howto/2.png)
+![New File Name](https://raw.githubusercontent.com/PLAIT-Project/AnonymizationTool/main/howto/2.png)
 
 Now, you are all set to let the Anonymization tool do its work: Click on the button "Anonymize"
 
-![Anonymize](https://raw.githubusercontent.com/Wandergarten/PLAIT-AnonApp/main/howto/3.png)
+![Anonymize](https://raw.githubusercontent.com/PLAIT-Project/AnonymizationTool/main/howto/3.png)
 
 Note that this is a student project!
 
