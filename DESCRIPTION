@@ -3,7 +3,7 @@ Type: Package
 Title: Anonymize FCS and LMD Files
 Version: 0.1.0
 Author: PLAIT Project Group
-Maintainer: PLAIT-Team <plaitprojekt@gmail.com>
+Maintainer: Michael Thrun <m.thrun@gmx.net>
 Description: AnonymizationTool for anonymizing personal data from FCS and LMD files.
     The package uses a Shiny App to anonymize all personal data, that 
     is find in a FCS or LMD file.  Anonymization is performed using predetermined
@@ -11,6 +11,9 @@ Description: AnonymizationTool for anonymizing personal data from FCS and LMD fi
     app and the corresponding content is overwritten with a string of "X". Thus, 
     |SampleID1|Max Mustermann| -> |SampleID1|XXXXXXXXXX| 
     Then a copy of the file is returned so the original file remains unchanged.
+    
+    For starting the app please refer to the README.md file or see the manual:
+    http://137.248.121.81:9798/plait/anonymisierungsapp/. 
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
