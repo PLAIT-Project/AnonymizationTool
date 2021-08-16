@@ -16,5 +16,7 @@ An anonymized file which is a copy of the origin file but without the personal i
 }
 \description{
 Takes an .fcs or .lmd file as an input, anonymizes all the personal data in that file and save it as a new .fcs or .lmd file within a Shiny App
+  
+For starting the app please refer to the README.md file or see the manual: http://137.248.121.81:9798/plait/anonymisierungsapp/. 
 }
 \keyword{datasets}
