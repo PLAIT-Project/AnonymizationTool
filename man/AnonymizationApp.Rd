@@ -9,14 +9,64 @@
 An object of class \code{shiny.tag.list} (inherits from \code{list}) of length 3.
 }
 \usage{
-ui
+shiny::runGitHub("AnonymizationTool", "PLAIT-project", subdir = "R")
 }
 \value{
-An anonymized file which is a copy of the origin file but without the personal information and another filename
+An anonymized file which is a copy of the origin file but without the personal information and another filename.
 }
 \description{
-Takes an .fcs or .lmd file as an input, anonymizes all the personal data in that file and save it as a new .fcs or .lmd file within a Shiny App
-  
-For starting the app please refer to the README.md file or see the manual: http://137.248.121.81:9798/plait/anonymisierungsapp/. 
+Takes an .fcs or .lmd file as an input, anonymizes all the personal data in that file and save it as a new .fcs or .lmd file within a Shiny App.
+
+For detailed instructions for using the AnonymizationApp please refer to the README.md file or see the manual: http://137.248.121.81:9798/plait/anonymisierungsapp/. 
 }
+\details{
+The deletion of personal information is done on byte level via a hexeditor. Here 
+ all non-personal data and also the structure of the .fcs/.lmd files are retained.
+Specifically, an .fcs/.lmd file consists of a list of keywords and the corresponding information for the keyword.
+
+For example a keyword is called "SampleID1". Behind this keyword is the name of the patient, if entered. Another keyword is "Location". Behind this keyword is the location of the hospital where the treating physicians work.
+The first keyword belongs to personal data and must be deleted, the second keyword is not personal data and therefore remains in the .fcs/.lmd file.
+
+
+}
+\note{
+Keywords that will be anonymized are the following:
+
+\itemize{
+  \item SAMPLEID1
+  \item FILENAME
+  \item ORIGINALGUID
+  \item GUID
+  \item $FIL
+  }
+
+The use of our AnonymizationApp does not guarantee perfect anonymization. This is especially true for .fcs files since standardization is missing and heterogeneity of contents and structures are too great. Another problem is missing RCpp support for FCS encodings. Thus, working with a hexeditor is recommended to check the correct anonymization process of our app in FCS binary code. LMD files are not affected by this problem. Verification of complete and correct anonymization is recommended anyhow.
+
+
+There is no guarantee that the keywords are complete. It is possible that there are keywords that have personal data but are not anonymized by the anonymization app. If such a keyword is detected, the code of the Hexeditor.cpp should immediately be adjusted to this keyword, so that there are no further problems with future anonymizations.
+
+Also IMPORTANT: The file name of the anonymized file must not contain any personal information about the patient.
+
+}
+
+
+\examples{
+# required package installation
+requiredPackages <- c("shiny", "shinyjs", "shinyFiles", "shinyFeedback", "Rcpp")
+new.packages <- requiredPackages[!(requiredPackages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages, quiet=TRUE) invisible(lapply(requiredPackages, library, character.only = TRUE))
+
+# Download the AnonymizationApp by entering the following command in the R console
+shiny::runGitHub("AnonymizationTool", "PLAIT-project", subdir = "R")
+
+# Alternatively download the repository as ZIP (Important: unzip the folder). Open the corresponding folder and the Anonymization Tool below it. 
+# The RProgram opens. In the console, enter the following command: 
+shiny::runApp('R').
+
+# For detailed instructions for using the AnonymizationApp please refer to the pictorial explanation in the README.md file or see the manual: http://137.248.121.81:9798/plait/anonymisierungsapp/.
+}
+
+
+
+\author{PLAIT-Projektgruppe}
 \keyword{datasets}
